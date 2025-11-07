@@ -1,0 +1,73 @@
+2025-11-03 09:30:24,359 - __main__ - INFO - ======================================================================
+2025-11-03 09:30:24,360 - __main__ - INFO - CHAT 2: GUARDIAN MODEL TRAINING & EVALUATION
+2025-11-03 09:30:24,360 - __main__ - INFO - ======================================================================
+2025-11-03 09:30:24,360 - __main__ - INFO - Initializing model trainer...
+2025-11-03 09:30:24,362 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-03 09:30:24,362 - __main__ - INFO - STEP 1: Loading Training Data
+2025-11-03 09:30:24,363 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-03 09:30:24,363 - models.trainer - INFO - Loading training data...
+2025-11-03 09:30:24,603 - models.trainer - INFO - Training set: 80,000 samples, 6 features
+2025-11-03 09:30:24,604 - models.trainer - INFO - Test set: 20,000 samples
+2025-11-03 09:30:24,605 - models.trainer - INFO - Fraud rate - Train: 0.0150, Test: 0.0150
+2025-11-03 09:30:24,606 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-03 09:30:24,606 - __main__ - INFO - STEP 2: Training XGBoost Model
+2025-11-03 09:30:24,607 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-03 09:30:24,607 - models.trainer - INFO - Training XGBoost fraud classifier...
+2025-11-03 09:30:24,608 - models.trainer - INFO - Hyperparameters: {'objective': 'binary:logistic', 'eval_metric': 'auc', 'max_depth': 8, 'learning_rate': 0.01, 'n_estimators': 500, 'subsample': 0.8, 'colsample_bytree': 0.8, 'min_child_weight': 3, 'gamma': 0.1, 'reg_alpha': 0.1, 'reg_lambda': 1.0, 'scale_pos_weight': np.float64(65.66666666666667), 'random_state': 42, 'n_jobs': -1, 'tree_method': 'hist'}
+2025-11-03 09:30:31,535 - models.trainer - INFO - Model training complete!
+2025-11-03 09:30:31,555 - models.trainer - INFO - Top 10 features:
+            feature  importance
+1              hour    0.817112
+4      velocity_24h    0.161747
+0            amount    0.010752
+5  amount_deviation    0.005691
+2        amount_log    0.003903
+3        is_weekend    0.000794
+2025-11-03 09:30:31,556 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-03 09:30:31,556 - __main__ - INFO - STEP 3: Evaluating Model Performance
+2025-11-03 09:30:31,557 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-03 09:30:31,557 - models.trainer - INFO - Evaluating model performance...
+2025-11-03 09:30:31,674 - models.trainer - INFO - ==================================================
+2025-11-03 09:30:31,674 - models.trainer - INFO - MODEL EVALUATION RESULTS
+2025-11-03 09:30:31,675 - models.trainer - INFO - ==================================================
+2025-11-03 09:30:31,675 - models.trainer - INFO - Accuracy:  1.0000
+2025-11-03 09:30:31,675 - models.trainer - INFO - Precision: 1.0000
+2025-11-03 09:30:31,676 - models.trainer - INFO - Recall:    1.0000
+2025-11-03 09:30:31,676 - models.trainer - INFO - F1 Score:  1.0000
+2025-11-03 09:30:31,676 - models.trainer - INFO - AUC-ROC:   1.0000
+2025-11-03 09:30:31,677 - models.trainer - INFO - ==================================================
+2025-11-03 09:30:31,787 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-03 09:30:31,787 - __main__ - INFO - STEP 4: Generating Visualizations
+2025-11-03 09:30:31,788 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-03 09:30:33,867 - models.visualizer - INFO - Confusion matrix saved to visualizations\confusion_matrix.png
+2025-11-03 09:30:34,799 - models.visualizer - INFO - ROC curve saved to visualizations\roc_curve.png
+2025-11-03 09:30:36,170 - models.visualizer - INFO - Feature importance saved to visualizations\feature_importance.png
+2025-11-03 09:30:36,225 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-03 09:30:36,226 - __main__ - INFO - STEP 5: Saving Model and Reports
+2025-11-03 09:30:36,228 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-03 09:30:36,228 - models.trainer - INFO - Saving model as xgboost_fraud...
+2025-11-03 09:30:36,252 - models.trainer - INFO - Model saved to: models\xgboost_fraud_20251103_093036.pkl
+2025-11-03 09:30:36,297 - models.trainer - INFO - Feature importance saved to: models\xgboost_fraud_feature_importance_20251103_093036.csv
+2025-11-03 09:30:36,300 - models.trainer - INFO - Evaluation report saved to: reports\xgboost_fraud_evaluation_20251103_093036.json
+2025-11-03 09:30:36,300 - __main__ - INFO - 
+======================================================================
+2025-11-03 09:30:36,300 - __main__ - INFO - CHAT 2 COMPLETE!
+2025-11-03 09:30:36,301 - __main__ - INFO - ======================================================================
+2025-11-03 09:30:36,301 - __main__ - INFO - Model saved to: models\xgboost_fraud_20251103_093036.pkl
+2025-11-03 09:30:36,301 - __main__ - INFO - Evaluation report saved to: reports\xgboost_fraud_evaluation_20251103_093036.json
+2025-11-03 09:30:36,302 - __main__ - INFO - 
+Performance Summary:
+2025-11-03 09:30:36,302 - __main__ - INFO -   Accuracy:  1.0000 (100.00%)
+2025-11-03 09:30:36,302 - __main__ - INFO -   Precision: 1.0000
+2025-11-03 09:30:36,303 - __main__ - INFO -   Recall:    1.0000
+2025-11-03 09:30:36,303 - __main__ - INFO -   F1 Score:  1.0000
+2025-11-03 09:30:36,303 - __main__ - INFO -   AUC-ROC:   1.0000
+2025-11-03 09:30:36,304 - __main__ - INFO - 
+======================================================================
+2025-11-03 09:30:36,304 - __main__ - INFO - Ready for Chat 3: FastAPI Backend
+2025-11-03 09:30:36,304 - __main__ - INFO - ======================================================================

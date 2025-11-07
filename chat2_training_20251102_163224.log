@@ -1,0 +1,120 @@
+2025-11-02 16:32:24,864 - __main__ - INFO - ======================================================================
+2025-11-02 16:32:24,864 - __main__ - INFO - CHAT 2: GUARDIAN MODEL TRAINING & EVALUATION
+2025-11-02 16:32:24,864 - __main__ - INFO - ======================================================================
+2025-11-02 16:32:24,864 - __main__ - INFO - Initializing model trainer...
+2025-11-02 16:32:24,865 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-02 16:32:24,866 - __main__ - INFO - STEP 1: Loading Training Data
+2025-11-02 16:32:24,866 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-02 16:32:24,867 - models.trainer - INFO - Loading training data...
+2025-11-02 16:33:59,861 - models.trainer - INFO - Training set: 5,317,941 samples, 78 features
+2025-11-02 16:33:59,862 - models.trainer - INFO - Test set: 1,329,486 samples
+2025-11-02 16:33:59,872 - models.trainer - INFO - Fraud rate - Train: 0.0013, Test: 0.0013
+2025-11-02 16:33:59,872 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-02 16:33:59,872 - __main__ - INFO - STEP 2: Training XGBoost Model
+2025-11-02 16:33:59,873 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-02 16:33:59,873 - models.trainer - INFO - Training XGBoost fraud classifier...
+2025-11-02 16:33:59,885 - models.trainer - INFO - Hyperparameters: {'objective': 'binary:logistic', 'eval_metric': 'auc', 'max_depth': 8, 'learning_rate': 0.01, 'n_estimators': 500, 'subsample': 0.8, 'colsample_bytree': 0.8, 'min_child_weight': 3, 'gamma': 0.1, 'reg_alpha': 0.1, 'reg_lambda': 1.0, 'scale_pos_weight': np.float64(762.6331131533602), 'random_state': 42, 'n_jobs': -1, 'tree_method': 'hist'}
+2025-11-02 16:33:59,960 - __main__ - ERROR - Error in Chat 2 execution: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:type: object, nameOrig: object, nameDest: object, type_CASH_IN: object, type_CASH_OUT: object, type_DEBIT: object, type_PAYMENT: object, type_TRANSFER: object
+Traceback (most recent call last):
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 407, in pandas_feature_info
+    new_feature_types.append(_pandas_dtype_mapper[dtype.name])
+                             ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^
+KeyError: 'object'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\reich\Projects\HEDIS-MA-Top-12-w-HEI-Prep\project\repo-guardian\scripts\run_chat2.py", line 54, in main
+    model = trainer.train_xgboost(X_train, y_train)
+  File "C:\Users\reich\Projects\HEDIS-MA-Top-12-w-HEI-Prep\project\repo-guardian\src\models\trainer.py", line 134, in train_xgboost
+    self.model.fit(
+    ~~~~~~~~~~~~~~^
+        X_train,
+        ^^^^^^^^
+    ...<2 lines>...
+        verbose=100
+        ^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 774, in inner_f
+    return func(**kwargs)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\sklearn.py", line 1784, in fit
+    train_dmatrix, evals = _wrap_evaluation_matrices(
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~^
+        missing=self.missing,
+        ^^^^^^^^^^^^^^^^^^^^^
+    ...<14 lines>...
+        feature_types=feature_types,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\sklearn.py", line 701, in _wrap_evaluation_matrices
+    train_dmatrix = create_dmatrix(
+        data=X,
+    ...<9 lines>...
+        ref=None,
+    )
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\sklearn.py", line 1254, in _create_dmatrix
+    return QuantileDMatrix(
+        **kwargs, ref=ref, nthread=self.n_jobs, max_bin=self.max_bin
+    )
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 774, in inner_f
+    return func(**kwargs)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 1768, in __init__
+    self._init(
+    ~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<12 lines>...
+        max_quantile_blocks=max_quantile_batches,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 1832, in _init
+    it.reraise()
+    ~~~~~~~~~~^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 617, in reraise
+    raise exc  # pylint: disable=raising-bad-type
+    ^^^^^^^^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 598, in _handle_exception
+    return fn()
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 685, in <lambda>
+    return self._handle_exception(lambda: int(self.next(input_data)), 0)
+                                              ~~~~~~~~~^^^^^^^^^^^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 1632, in next
+    input_data(**self.kwargs)
+    ~~~~~~~~~~^^^^^^^^^^^^^^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 774, in inner_f
+    return func(**kwargs)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\core.py", line 665, in input_data
+    new, feature_names, feature_types = _proxy_transform(
+                                        ~~~~~~~~~~~~~~~~^
+        data,
+        ^^^^^
+    ...<2 lines>...
+        self._enable_categorical,
+        ^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 1685, in _proxy_transform
+    df, feature_names, feature_types = _transform_pandas_df(
+                                       ~~~~~~~~~~~~~~~~~~~~^
+        data, enable_categorical, feature_names, feature_types
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 662, in _transform_pandas_df
+    feature_names, feature_types = pandas_feature_info(
+                                   ~~~~~~~~~~~~~~~~~~~^
+        data, meta, feature_names, feature_types, enable_categorical
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 409, in pandas_feature_info
+    _invalid_dataframe_dtype(data)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\xgboost\data.py", line 372, in _invalid_dataframe_dtype
+    raise ValueError(msg)
+ValueError: DataFrame.dtypes for data must be int, float, bool or category. When categorical type is supplied, the experimental DMatrix parameter`enable_categorical` must be set to `True`.  Invalid columns:type: object, nameOrig: object, nameDest: object, type_CASH_IN: object, type_CASH_OUT: object, type_DEBIT: object, type_PAYMENT: object, type_TRANSFER: object

@@ -14,17 +14,21 @@ from pathlib import Path
 
 # Try to import imageio, fallback to PIL
 try:
-    import imageio
+    import imageio.v2 as imageio
     HAS_IMAGEIO = True
 except ImportError:
     try:
-        from PIL import Image
-        HAS_IMAGEIO = False
-        HAS_PIL = True
+        import imageio
+        HAS_IMAGEIO = True
     except ImportError:
-        HAS_IMAGEIO = False
-        HAS_PIL = False
-        print("Warning: Neither imageio nor PIL available. Install with: pip install imageio pillow")
+        try:
+            from PIL import Image
+            HAS_IMAGEIO = False
+            HAS_PIL = True
+        except ImportError:
+            HAS_IMAGEIO = False
+            HAS_PIL = False
+            print("Warning: Neither imageio nor PIL available. Install with: pip install imageio pillow")
 
 # Add src to path
 script_dir = Path(__file__).parent
@@ -94,20 +98,26 @@ def create_prediction_animation(
         axes[0].clear()
         axes[1].clear()
         
+        # Set consistent limits to ensure frame sizes match
+        axes[0].set_xlim(0, len(y_pred_proba))
+        axes[0].set_ylim(0, 1)
+        axes[1].set_xlim(0, len(y_pred_proba))
+        axes[1].set_ylim(-0.5, 1.5)
+        
         # Plot 1: Fraud probability over time
-        axes[0].plot(current_proba, color='red', linewidth=2, label='Fraud Probability')
-        axes[0].axhline(y=0.5, color='orange', linestyle='--', label='Threshold (0.5)')
-        axes[0].fill_between(range(len(current_proba)), current_proba, 0.5, 
-                            where=(current_proba >= 0.5), alpha=0.3, color='red', label='Fraud Detected')
+        if len(current_proba) > 0:
+            axes[0].plot(range(len(current_proba)), current_proba, color='red', linewidth=2, label='Fraud Probability')
+            axes[0].axhline(y=0.5, color='orange', linestyle='--', label='Threshold (0.5)')
+            axes[0].fill_between(range(len(current_proba)), current_proba, 0.5, 
+                                where=(current_proba >= 0.5), alpha=0.3, color='red', label='Fraud Detected')
         axes[0].set_xlabel('Transaction #', fontsize=11)
         axes[0].set_ylabel('Fraud Probability', fontsize=11)
         axes[0].set_title(f'Real-time Fraud Detection ({end_idx} transactions)', fontsize=12, fontweight='bold')
-        axes[0].set_ylim(0, 1)
         axes[0].legend(loc='upper right')
         axes[0].grid(True, alpha=0.3)
         
         # Plot 2: Distribution of predictions
-        fraud_count = current_pred.sum()
+        fraud_count = current_pred.sum() if len(current_pred) > 0 else 0
         legit_count = len(current_pred) - fraud_count
         
         axes[1].barh(['Legitimate', 'Fraud'], [legit_count, fraud_count], 
@@ -126,17 +136,25 @@ def create_prediction_animation(
         
         plt.tight_layout()
         
-        # Save frame
+        # Save frame with consistent size
         frame_path = output_path.parent / f"frame_{i:03d}.png"
-        plt.savefig(frame_path, dpi=100, bbox_inches='tight')
+        plt.savefig(frame_path, dpi=100, bbox_inches='tight', facecolor='white')
+        
+        # Read frame and ensure consistent dimensions
         if HAS_IMAGEIO:
-            frames.append(imageio.imread(frame_path))
+            frame_img = imageio.imread(frame_path)
+            # Resize to consistent dimensions if needed (use first frame as reference)
+            if i > 0 and len(frames) > 0 and frame_img.shape != frames[0].shape:
+                from PIL import Image
+                pil_img = Image.fromarray(frame_img)
+                reference_shape = frames[0].shape
+                pil_img = pil_img.resize((reference_shape[1], reference_shape[0]), Image.Resampling.LANCZOS)
+                frame_img = np.array(pil_img)
+            frames.append(frame_img)
         elif HAS_PIL:
             frames.append(Image.open(frame_path))
         else:
             frames.append(str(frame_path))
-        
-        # Clean up frame file later
         
         print(f"  Frame {i+1}/{num_frames} created")
     

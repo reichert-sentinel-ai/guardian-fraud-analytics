@@ -1,0 +1,40 @@
+2025-11-02 21:14:28,857 - __main__ - INFO - ======================================================================
+2025-11-02 21:14:28,857 - __main__ - INFO - CHAT 2: GUARDIAN MODEL TRAINING & EVALUATION
+2025-11-02 21:14:28,857 - __main__ - INFO - ======================================================================
+2025-11-02 21:14:28,858 - __main__ - INFO - Initializing model trainer...
+2025-11-02 21:14:28,859 - __main__ - INFO - 
+----------------------------------------------------------------------
+2025-11-02 21:14:28,859 - __main__ - INFO - STEP 1: Loading Training Data
+2025-11-02 21:14:28,870 - __main__ - INFO - ----------------------------------------------------------------------
+2025-11-02 21:14:28,870 - models.trainer - INFO - Loading training data...
+2025-11-02 21:14:28,872 - __main__ - ERROR - Error in Chat 2 execution: [Errno 2] No such file or directory: 'data/processed/X_train.csv'
+Traceback (most recent call last):
+  File "C:\Users\reich\Projects\HEDIS-MA-Top-12-w-HEI-Prep\project\repo-guardian\scripts\run_chat2.py", line 48, in main
+    X_train, y_train, X_test, y_test = trainer.load_training_data()
+                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "C:\Users\reich\Projects\HEDIS-MA-Top-12-w-HEI-Prep\project\repo-guardian\src\models\trainer.py", line 67, in load_training_data
+    X_train = pd.read_csv(X_train_path)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1026, in read_csv
+    return _read(filepath_or_buffer, kwds)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 620, in _read
+    parser = TextFileReader(filepath_or_buffer, **kwds)
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1620, in __init__
+    self._engine = self._make_engine(f, self.engine)
+                   ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\parsers\readers.py", line 1880, in _make_engine
+    self.handles = get_handle(
+                   ~~~~~~~~~~^
+        f,
+        ^^
+    ...<6 lines>...
+        storage_options=self.options.get("storage_options", None),
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\reich\AppData\Local\Programs\Python\Python313\Lib\site-packages\pandas\io\common.py", line 873, in get_handle
+    handle = open(
+        handle,
+    ...<3 lines>...
+        newline="",
+    )
+FileNotFoundError: [Errno 2] No such file or directory: 'data/processed/X_train.csv'

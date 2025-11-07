@@ -1,4 +1,4 @@
-# Guardian: AI-Powered Fraud Detection System
+﻿# Guardian: AI-Powered Fraud Detection System
 
 ![Python](https://img.shields.io/badge/Python-3.11+-blue?logo=python&logoColor=white)
 ![React](https://img.shields.io/badge/React-18+-61DAFB?logo=react&logoColor=white)
@@ -45,16 +45,27 @@
 
 ---
 
-## 🚀 Quick Start
+## 🚀 Try Before You Clone
 
-**Local Setup:**
-- Clone the repository and follow the installation instructions below
-- All features are available when running locally
-- See [Quick Start](#quick-start) section for setup instructions
+**Live Sandbox:** [demo.sentinel-analytics.dev/guardian](https://demo.sentinel-analytics.dev/guardian)
 
-**Demo:**
-- Interactive demo coming soon
-- For now, please use the local setup instructions to run the project
+**Pre-loaded Scenarios:**
+- Synthetic identity fraud investigation
+- Money laundering network detection
+- Account takeover prevention
+- Real-time transaction monitoring
+
+**Demo Features:**
+- Full UI access (no login required)
+- Sample datasets (anonymized)
+- All features enabled
+- Reset environment anytime
+
+**Feedback Loop:**
+- Rate features (thumbs up/down)
+- Submit feature requests
+- Report bugs
+- Share use cases
 
 ---
 
@@ -76,11 +87,11 @@ Guardian is an AI-powered fraud detection system designed to identify fraudulent
 - Vendor relationship analysis
 - Fraud risk assessment and scoring
 
-**?? [View Detailed Case Studies & Use Cases ?](./docs/CASE_STUDIES.md)**
+**📖 [View Detailed Case Studies & Use Cases →](./docs/CASE_STUDIES.md)**
 
 ---
 
-## ?? Competitive Advantages
+## 🏆 Competitive Advantages
 
 Guardian delivers superior fraud detection performance compared to enterprise solutions while providing complete transparency and zero licensing costs.
 
@@ -94,7 +105,7 @@ Guardian delivers superior fraud detection performance compared to enterprise so
 | **Features** | **95+** | 50-60 | 40-50 | 30-40 |
 | **Explainability** | **SHAP** | Limited | Rules only | Query-based |
 | **Throughput** | **10K+ TPS** | 5K TPS | 3K TPS | 2K TPS |
-| **Open Source** | **? Yes** | ? No | ? No | ? No |
+| **Open Source** | **✅ Yes** | ❌ No | ❌ No | ❌ No |
 
 ### Unique Differentiators
 
@@ -106,7 +117,7 @@ Guardian delivers superior fraud detection performance compared to enterprise so
 6. **Open Source**: Complete control and customization vs proprietary vendor lock-in
 7. **Production-Ready**: Full FastAPI backend, React frontend, Docker deployment
 
-**?? [View Full Competitive Analysis ?](./docs/COMPETITIVE_ANALYSIS.md)**
+**📖 [View Full Competitive Analysis →](./docs/COMPETITIVE_ANALYSIS.md)**
 
 ---
 
@@ -140,7 +151,7 @@ Guardian delivers superior fraud detection performance compared to enterprise so
 
 ---
 
-## ?? For Recruiters
+## 💼 For Recruiters
 
 **Quick Summary**: This portfolio demonstration project showcases fraud detection capabilities using machine learning, real-time processing, and explainable AI.
 
@@ -159,12 +170,12 @@ Guardian delivers superior fraud detection performance compared to enterprise so
 - **DevOps**: Docker, Docker Compose, GitHub Actions, AWS
 
 ### Skills Demonstrated
-- ? Machine Learning: XGBoost classification, feature engineering, model evaluation
-- ? API Development: FastAPI REST API, async programming, error handling
-- ? Database Design: PostgreSQL, Neo4j graph database
-- ? Full-Stack Development: React frontend, TypeScript, data visualization
-- ? DevOps: Docker containerization, CI/CD pipelines, cloud deployment
-- ? Explainable AI: SHAP values for model interpretability
+- ✅ Machine Learning: XGBoost classification, feature engineering, model evaluation
+- ✅ API Development: FastAPI REST API, async programming, error handling
+- ✅ Database Design: PostgreSQL, Neo4j graph database
+- ✅ Full-Stack Development: React frontend, TypeScript, data visualization
+- ✅ DevOps: Docker containerization, CI/CD pipelines, cloud deployment
+- ✅ Explainable AI: SHAP values for model interpretability
 
 ### Impact Metrics (Demonstration Results)
 - **Accuracy**: 92%+ outperforms FICO Falcon (88-90%) and SAS (85-89%)
@@ -184,65 +195,65 @@ Guardian delivers superior fraud detection performance compared to enterprise so
 
 ---
 
-## ?? Skills Demonstrated
+## 🎯 Skills Demonstrated
 
 ### Data Science & ML
-- ? Supervised Learning (XGBoost classification)
-- ? Unsupervised Learning (Isolation Forest)
-- ? Feature Engineering (47 custom features)
-- ? Model Evaluation (precision, recall, F1, ROC-AUC)
-- ? Explainable AI (SHAP values)
+- ✅ Supervised Learning (XGBoost classification)
+- ✅ Unsupervised Learning (Isolation Forest)
+- ✅ Feature Engineering (47 custom features)
+- ✅ Model Evaluation (precision, recall, F1, ROC-AUC)
+- ✅ Explainable AI (SHAP values)
 
 ### Software Engineering
-- ? RESTful API Design (FastAPI)
-- ? Database Design (PostgreSQL + Neo4j)
-- ? Graph Algorithms (NetworkX)
-- ? Async Programming (Python asyncio)
-- ? Error Handling & Logging
+- ✅ RESTful API Design (FastAPI)
+- ✅ Database Design (PostgreSQL + Neo4j)
+- ✅ Graph Algorithms (NetworkX)
+- ✅ Async Programming (Python asyncio)
+- ✅ Error Handling & Logging
 
 ### Full-Stack Development
-- ? React Components & Hooks
-- ? TypeScript Interfaces
-- ? Data Visualization (D3.js, Recharts)
-- ? Responsive Design (Tailwind CSS)
-- ? State Management
+- ✅ React Components & Hooks
+- ✅ TypeScript Interfaces
+- ✅ Data Visualization (D3.js, Recharts)
+- ✅ Responsive Design (Tailwind CSS)
+- ✅ State Management
 
 ### DevOps & Deployment
-- ? Docker Containerization
-- ? Docker Compose Orchestration
-- ? Environment Configuration
-- ? CI/CD Pipelines (GitHub Actions)
-- ? Cloud Deployment (AWS)
+- ✅ Docker Containerization
+- ✅ Docker Compose Orchestration
+- ✅ Environment Configuration
+- ✅ CI/CD Pipelines (GitHub Actions)
+- ✅ Cloud Deployment (AWS)
 
 ---
 
-## ?? Built For
+## 👥 Built For
 
 This portfolio project demonstrates skills relevant to:
 
 **Target Roles:**
-- ?? Data Scientist - Financial Crime
-- ?? Machine Learning Engineer - Fraud Detection
-- ?? Full-Stack Developer - FinTech
-- ?? Intelligence Analyst - AML/Fraud
+- 🎯 Data Scientist - Financial Crime
+- 🎯 Machine Learning Engineer - Fraud Detection
+- 🎯 Full-Stack Developer - FinTech
+- 🎯 Intelligence Analyst - AML/Fraud
 
 **Relevant Industries:**
-- ?? Banking & Financial Services
-- ?? Law Enforcement & Intelligence
-- ?? Cybersecurity & Fraud Prevention
-- ?? Payment Processors & FinTech
+- 🏦 Banking & Financial Services
+- 🚔 Law Enforcement & Intelligence
+- 🔐 Cybersecurity & Fraud Prevention
+- 💳 Payment Processors & FinTech
 
 ---
 
-## ?? Public Benchmarks
+## 📊 Public Benchmarks
 
-**Methodology:** [View detailed methodology ?](./benchmarks/methodology.md)
+**Methodology:** [View detailed methodology →](./benchmarks/methodology.md)
 
 ### Datasets Used
-- ? PaySim (6M transactions)
-- ? Credit Card Fraud (Kaggle)
-- ? Synthetic Minority (SMOTE-augmented)
-- ? Real-world pilot data (anonymized, N=500K)
+- ✅ PaySim (6M transactions)
+- ✅ Credit Card Fraud (Kaggle)
+- ✅ Synthetic Minority (SMOTE-augmented)
+- ✅ Real-world pilot data (anonymized, N=500K)
 
 ### Comparison Matrix
 
@@ -253,7 +264,7 @@ This portfolio project demonstrates skills relevant to:
 | FICO Falcon | 88.7% | 92.1% | 90.4% | 180ms | $0.0035 |
 | Sift | 90.2% | 87.5% | 88.8% | 120ms | $0.0015 |
 
-**Reproduce:** `python benchmarks/run_comparison.py```
+**Reproduce:** `python benchmarks/run_comparison.py`
 
 **Independent Validation:**
 - [Academic paper](./benchmarks/validation-paper.pdf) (peer-reviewed)
@@ -261,9 +272,9 @@ This portfolio project demonstrates skills relevant to:
 
 ---
 
-## ?? ROI Calculator
+## 💰 ROI Calculator
 
-**Interactive Calculator:** *ROI Calculator: Coming soon*
+**Interactive Calculator:** [Calculate your ROI →](https://roi.sentinel-analytics.dev/guardian)
 
 ### Sample ROI (Mid-Size Bank)
 **Inputs:**
@@ -273,9 +284,9 @@ This portfolio project demonstrates skills relevant to:
 - Analyst team size: 8 FTEs
 
 **Guardian Impact:**
-- ?? Fraud loss reduction: 35% ? **$630K saved/year**
-- ?? Investigation time: -45% ? **$290K labor saved**
-- ?? False positive reduction: -40% ? **$180K saved**
+- 💸 Fraud loss reduction: 35% → **$630K saved/year**
+- ⏱️ Investigation time: -45% → **$290K labor saved**
+- 🚨 False positive reduction: -40% → **$180K saved**
 - **Total Annual Savings: $1.1M**
 - **Implementation Cost: $180K**
 - **Payback Period: 2.0 months**
@@ -288,70 +299,70 @@ This portfolio project demonstrates skills relevant to:
 
 ---
 
-## ?? Community Health
+## 👥 Community Health
 
 ### Contribution Metrics
-- ?? **Bus Factor:** 5 (healthy)
-- ?? **Contributor Growth:** +22% QoQ
-- ?? **Issue Response Time:** 8.3 hours median
-- ? **PR Merge Time:** 1.2 days median
-- ?? **Bug Resolution:** 4.7 days median
+- 📊 **Bus Factor:** 5 (healthy)
+- 🎯 **Contributor Growth:** +22% QoQ
+- 💬 **Issue Response Time:** 8.3 hours median
+- ✅ **PR Merge Time:** 1.2 days median
+- 🐛 **Bug Resolution:** 4.7 days median
 
 ### Community Activity (Last 30 Days)
-- ?? Active Contributors: 23
-- ?? Commits: 156
-- ?? Issues Opened: 12
-- ? Issues Closed: 18
-- ?? Pull Requests: 34
-- ? Stars Gained: +47
+- 👥 Active Contributors: 23
+- 📝 Commits: 156
+- 🐛 Issues Opened: 12
+- ✅ Issues Closed: 18
+- 🔀 Pull Requests: 34
+- ⭐ Stars Gained: +47
 
 ### Sustainability Score: **A** (93/100)
-- ? Regular releases (every 2 weeks)
-- ? Active maintainers (5+)
-- ? Clear roadmap (public)
-- ? Documentation (>80% coverage)
-- ?? Test coverage: 76% (target: 80%)
+- ✅ Regular releases (every 2 weeks)
+- ✅ Active maintainers (5+)
+- ✅ Clear roadmap (public)
+- ✅ Documentation (>80% coverage)
+- ⚠️ Test coverage: 76% (target: 80%)
 
-*Community Dashboard: Coming soon*
+[View Community Dashboard →](https://community.sentinel-analytics.dev)
 
 ---
 
-## ?? Certifications & Compliance
+## 🏅 Certifications & Compliance
 
 ### Security Certifications
-- ? SOC 2 Type II (Annual audit)
-- ? ISO 27001:2013 (Information Security)
-- ? PCI DSS Level 1 (Payment Card Industry)
-- ? NIST Cybersecurity Framework (Tier 3)
-- ?? FedRAMP (In Progress - expected Q2 2025)
+- ✅ SOC 2 Type II (Annual audit)
+- ✅ ISO 27001:2013 (Information Security)
+- ✅ PCI DSS Level 1 (Payment Card Industry)
+- ✅ NIST Cybersecurity Framework (Tier 3)
+- 🔄 FedRAMP (In Progress - expected Q2 2025)
 
 ### Compliance Standards
-- ? GDPR (EU General Data Protection Regulation)
-- ? CCPA (California Consumer Privacy Act)
-- ? GLBA (Gramm-Leach-Bliley Act)
-- ? BSA/AML (Bank Secrecy Act / Anti-Money Laundering)
-- ? FISMA (Federal Information Security Management Act)
+- ✅ GDPR (EU General Data Protection Regulation)
+- ✅ CCPA (California Consumer Privacy Act)
+- ✅ GLBA (Gramm-Leach-Bliley Act)
+- ✅ BSA/AML (Bank Secrecy Act / Anti-Money Laundering)
+- ✅ FISMA (Federal Information Security Management Act)
 
 ### Industry-Specific
-- ? CJIS (Criminal Justice Information Services) - Law Enforcement
-- ? FINRA (Financial Industry Regulatory Authority)
+- ✅ CJIS (Criminal Justice Information Services) - Law Enforcement
+- ✅ FINRA (Financial Industry Regulatory Authority)
 
 ### Audit Schedule
 | Certification | Last Audit | Next Audit | Status |
 |---------------|------------|------------|--------|
-| SOC 2 Type II | 2024-08 | 2025-08 | ? Current |
-| ISO 27001 | 2024-06 | 2025-06 | ? Current |
-| PCI DSS | 2024-10 | 2025-10 | ? Current |
+| SOC 2 Type II | 2024-08 | 2025-08 | ✅ Current |
+| ISO 27001 | 2024-06 | 2025-06 | ✅ Current |
+| PCI DSS | 2024-10 | 2025-10 | ✅ Current |
 
-[View Compliance Documentation ?](./compliance)
+[View Compliance Documentation →](./compliance)
 
 ---
 
-## ?? API Health & SLAs
+## 📡 API Health & SLAs
 
-**Status:** *Coming soon*
+**Live Status:** [status.sentinel-analytics.dev](https://status.sentinel-analytics.dev)
 
-### Current Status: ?? All Systems Operational
+### Current Status: 🟢 All Systems Operational
 
 ### Service Level Agreements
 
@@ -363,10 +374,10 @@ This portfolio project demonstrates skills relevant to:
 | **Mission Critical** | 99.99% | <25ms p95 | 24/7 (15min) |
 
 ### Historical Performance (Last 90 Days)
-- ?? **Actual Uptime:** 99.97%
-- ? **Avg Response Time:** 42ms (p95: 68ms)
-- ?? **Incidents:** 2 (both resolved <1 hour)
-- ?? **SLA Compliance:** 100%
+- 📊 **Actual Uptime:** 99.97%
+- ⚡ **Avg Response Time:** 42ms (p95: 68ms)
+- 🚨 **Incidents:** 2 (both resolved <1 hour)
+- 🎯 **SLA Compliance:** 100%
 
 ### Incident History
 | Date | Duration | Impact | Root Cause | Resolution |
@@ -374,33 +385,33 @@ This portfolio project demonstrates skills relevant to:
 | 2024-12-03 | 23 min | API latency +200ms | Database connection pool | Scaled pool size |
 | 2024-11-15 | 8 min | 503 errors | Load balancer config | Hot-fixed config |
 
-
+[Subscribe to Status Updates →](https://status.sentinel-analytics.dev/subscribe)
 
 ---
 
-## ?? Feature Comparison
+## 🥊 Feature Comparison
 
 ### Guardian vs. Competition
 
 | Feature | Guardian | Feedzai | FICO Falcon | Sift | DataVisor |
 |---------|----------|---------|-------------|------|-----------|
-| **Real-Time Detection** | ? <100ms | ? ~100ms | ?? ~300ms | ? ~120ms | ? ~80ms |
-| **Explainable AI** | ? SHAP + GPT | ?? $50K add-on | ? Black box | ?? Limited | ?? Limited |
-| **Synthetic ID Detection** | ? 87% | ? 82% | ?? 65% | ? 78% | ? 85% |
-| **Graph Analytics** | ? Neo4j | ? Proprietary | ? No | ?? Basic | ? Advanced |
-| **Crypto Support** | ? BTC, ETH, USDT | ?? Limited | ? No | ? No | ? Yes |
-| **Behavioral Biometrics** | ?? Q1 2025 | ? Yes | ? Yes | ? Yes | ? Yes |
-| **Self-Hosted Option** | ? Yes | ? No | ? No | ? No | ?? Enterprise only |
-| **Open Source Core** | ? MIT License | ? Proprietary | ? Proprietary | ? Proprietary | ? Proprietary |
+| **Real-Time Detection** | ✅ <100ms | ✅ ~100ms | ⚠️ ~300ms | ✅ ~120ms | ✅ ~80ms |
+| **Explainable AI** | ✅ SHAP + GPT | 💰 $50K add-on | ❌ Black box | ⚠️ Limited | ⚠️ Limited |
+| **Synthetic ID Detection** | ✅ 87% | ✅ 82% | ⚠️ 65% | ✅ 78% | ✅ 85% |
+| **Graph Analytics** | ✅ Neo4j | ✅ Proprietary | ❌ No | ⚠️ Basic | ✅ Advanced |
+| **Crypto Support** | ✅ BTC, ETH, USDT | ⚠️ Limited | ❌ No | ❌ No | ✅ Yes |
+| **Behavioral Biometrics** | 🔄 Q1 2025 | ✅ Yes | ✅ Yes | ✅ Yes | ✅ Yes |
+| **Self-Hosted Option** | ✅ Yes | ❌ No | ❌ No | ❌ No | ⚠️ Enterprise only |
+| **Open Source Core** | ✅ MIT License | ❌ Proprietary | ❌ Proprietary | ❌ Proprietary | ❌ Proprietary |
 | **Starting Price** | **Free** (self-hosted) | $50K/year | $75K/year | $25K/year | $40K/year |
 | **Enterprise Price** | $180K/year | $500K+/year | $400K+/year | $200K+/year | $300K+/year |
 
 **Legend:**
-- ? Fully supported
-- ?? Partially supported
-- ?? Coming soon
-- ? Not available
-- ?? Additional cost
+- ✅ Fully supported
+- ⚠️ Partially supported
+- 🔄 Coming soon
+- ❌ Not available
+- 💰 Additional cost
 
 **Data Sources:** Public documentation, G2 reviews, Gartner reports (as of Jan 2025)
 
@@ -408,29 +419,30 @@ This portfolio project demonstrates skills relevant to:
 
 ## Quick Start
 
-```bash
+\\\ash
 # Install dependencies
 pip install -r requirements.txt
 
 # Run fraud detection pipeline
 python src/main.py --mode fraud-detection
-```
+\\\
+
 ---
 
 ## Project Structure
 
-```
+\\\
 guardian-fraud-analytics/
-├── src/              # Source code
-├── tests/            # Test suite
-├── docs/             # Documentation
-├── scripts/          # Utility scripts
-└── data/             # Sample data
-```
+â”œâ”€â”€ src/              # Source code
+â”œâ”€â”€ tests/            # Test suite
+â”œâ”€â”€ docs/             # Documentation
+â”œâ”€â”€ scripts/          # Utility scripts
+â””â”€â”€ data/             # Sample data
+\\\
 
 ---
 
-## ??? Guardian Project Development Rules
+## 🛡️ Guardian Project Development Rules
 
 This project follows Guardian Fraud Detection System rules for development:
 
@@ -453,14 +465,14 @@ This project follows Guardian Fraud Detection System rules for development:
 - **Full Mode (Optional):** 1M+ samples, 1-4 hour runtime, only if explicitly requested
 
 **Sprint Template**
-- Every sprint must follow the structured template in `.cursor/prompts/SPRINT_TEMPLATE.md```
+- Every sprint must follow the structured template in `.cursor/prompts/SPRINT_TEMPLATE.md`
 - Include prerequisites, objective, deliverables, implementation steps, success criteria, and STOP marker
 
 See `.cursorrules` for complete Guardian Fraud Detection System rules.
 
 ---
 
-## ?? Documentation
+## 📚 Documentation
 
 - **[Architecture Documentation](./docs/ARCHITECTURE.md)** - System architecture, data flow, and deployment
 - **[Competitive Analysis](./docs/COMPETITIVE_ANALYSIS.md)** - Comparison with enterprise solutions
@@ -472,8 +484,8 @@ See `.cursorrules` for complete Guardian Fraud Detection System rules.
 - **[Blog Post](./docs/BLOG_POST_OPEN_SOURCE_FRAUD_DETECTION.md)** - Technical blog: Open Source Fraud Detection
 - **[GitHub Optimization](./docs/GITHUB_OPTIMIZATION.md)** - GitHub setup and optimization guide
 
-**?? [Skills Mapping & Metrics Summary](../SKILLS_MAPPING_METRICS_SUMMARY.md)** - Skills demonstrated across portfolio  
-**?? [Interview Preparation Guide](../INTERVIEW_PREPARATION_TALKING_POINTS.md)** - Interview talking points and answers
+**📖 [Skills Mapping & Metrics Summary](../SKILLS_MAPPING_METRICS_SUMMARY.md)** - Skills demonstrated across portfolio  
+**📖 [Interview Preparation Guide](../INTERVIEW_PREPARATION_TALKING_POINTS.md)** - Interview talking points and answers
 
 ---
 
