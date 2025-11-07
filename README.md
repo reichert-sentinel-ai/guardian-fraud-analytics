@@ -419,14 +419,14 @@ python src/main.py --mode fraud-detection
 
 ## Project Structure
 
-`````
+```
 guardian-fraud-analytics/
 ├── src/              # Source code
 ├── tests/            # Test suite
 ├── docs/             # Documentation
 ├── scripts/          # Utility scripts
 └── data/             # Sample data
-`````
+```
 
 ---
 
