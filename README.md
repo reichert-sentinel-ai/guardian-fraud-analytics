@@ -45,27 +45,16 @@
 
 ---
 
-## ?? Try Before You Clone
+## 🚀 Quick Start
 
-**Live Sandbox:** [demo.sentinel-analytics.dev/guardian](https://demo.sentinel-analytics.dev/guardian)
+**Local Setup:**
+- Clone the repository and follow the installation instructions below
+- All features are available when running locally
+- See [Quick Start](#quick-start) section for setup instructions
 
-**Pre-loaded Scenarios:**
-- Synthetic identity fraud investigation
-- Money laundering network detection
-- Account takeover prevention
-- Real-time transaction monitoring
-
-**Demo Features:**
-- Full UI access (no login required)
-- Sample datasets (anonymized)
-- All features enabled
-- Reset environment anytime
-
-**Feedback Loop:**
-- Rate features (thumbs up/down)
-- Submit feature requests
-- Report bugs
-- Share use cases
+**Demo:**
+- Interactive demo coming soon
+- For now, please use the local setup instructions to run the project
 
 ---
 
