@@ -1,0 +1,5 @@
+# Ignore large raw datasets not suitable for GitHub
+Artifacts/data/raw/guardian/*.csv
+Artifacts/data/processed/combined_features.csv
+Artifacts/data/processed/raw_credit_card.csv
+Artifacts/data/processed/raw_paysim.csv

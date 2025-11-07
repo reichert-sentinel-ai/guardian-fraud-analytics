@@ -167,48 +167,48 @@ export const NetworkGraph: React.FC<NetworkGraphProps> = ({
         ref={svgRef}
         width={width}
         height={height}
-        className="border border-gray-300 rounded bg-white"
+        className="border border-[#2a2a2a] rounded bg-[#121212] text-[#e5e5e5]"
         onClick={() => setSelectedNode(null)}
       />
       
       {/* Legend */}
-      <div className="absolute top-4 right-4 bg-white p-4 rounded shadow-lg text-sm">
-        <h3 className="font-semibold mb-2">Legend</h3>
+      <div className="absolute top-4 right-4 bg-[#151515] border border-[#2a2a2a] p-4 rounded shadow-lg text-sm text-[#e5e5e5]">
+        <h3 className="font-semibold mb-2 text-white">Legend</h3>
         <div className="space-y-1">
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-blue-500"></div>
-            <span>Account</span>
+            <span className="text-gray-200">Account</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-purple-500"></div>
-            <span>Merchant</span>
+            <span className="text-gray-200">Merchant</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-green-500"></div>
-            <span>Device</span>
+            <span className="text-gray-200">Device</span>
           </div>
           <div className="flex items-center gap-2">
             <div className="w-4 h-4 rounded-full bg-orange-500"></div>
-            <span>IP Address</span>
+            <span className="text-gray-200">IP Address</span>
           </div>
           <div className="border-t pt-2 mt-2">
             <div className="flex items-center gap-2">
               <div className="w-8 h-0.5 bg-gray-600"></div>
-              <span>Transaction</span>
+              <span className="text-gray-300">Transaction</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-8 h-0.5 bg-red-600"></div>
-              <span>Shared Device</span>
+              <span className="text-gray-300">Shared Device</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-8 h-0.5 bg-yellow-600"></div>
-              <span>Shared IP</span>
+              <span className="text-gray-300">Shared IP</span>
             </div>
           </div>
         </div>
         {data.fraud_ring_detected && (
-          <div className="mt-3 pt-3 border-t">
-            <div className="flex items-center gap-2 text-red-600 font-semibold">
+          <div className="mt-3 pt-3 border-t border-[#2a2a2a]">
+            <div className="flex items-center gap-2 text-red-400 font-semibold">
               <div className="w-4 h-4 rounded-full border-4 border-red-600"></div>
               <span>Fraud Ring Member</span>
             </div>
@@ -218,32 +218,32 @@ export const NetworkGraph: React.FC<NetworkGraphProps> = ({
 
       {/* Node Details Panel */}
       {selectedNode && (
-        <div className="absolute bottom-4 left-4 bg-white p-4 rounded shadow-lg max-w-sm">
-          <h3 className="font-semibold text-lg mb-2">{selectedNode.label}</h3>
+        <div className="absolute bottom-4 left-4 bg-[#151515] border border-[#2a2a2a] p-4 rounded shadow-lg max-w-sm text-[#e5e5e5]">
+          <h3 className="font-semibold text-lg mb-2 text-white">{selectedNode.label}</h3>
           <div className="text-sm space-y-1">
             <div className="flex justify-between">
-              <span className="text-gray-600">Type:</span>
-              <span className="font-medium capitalize">{selectedNode.type}</span>
+              <span className="text-gray-300">Type:</span>
+              <span className="font-medium capitalize text-gray-100">{selectedNode.type}</span>
             </div>
             <div className="flex justify-between">
-              <span className="text-gray-600">Risk Score:</span>
+              <span className="text-gray-300">Risk Score:</span>
               <span className={`font-bold ${
                 selectedNode.risk_score > 0.7 ? 'text-red-600' :
-                selectedNode.risk_score > 0.3 ? 'text-yellow-600' :
-                'text-green-600'
+                selectedNode.risk_score > 0.3 ? 'text-yellow-400' :
+                'text-green-400'
               }`}>
                 {(selectedNode.risk_score * 100).toFixed(1)}%
               </span>
             </div>
             {selectedNode.metadata && Object.entries(selectedNode.metadata).map(([key, value]) => (
               <div key={key} className="flex justify-between">
-                <span className="text-gray-600 capitalize">{key.replace(/_/g, ' ')}:</span>
-                <span className="font-medium">{String(value)}</span>
+                <span className="text-gray-300 capitalize">{key.replace(/_/g, ' ')}:</span>
+                <span className="font-medium text-gray-100">{String(value)}</span>
               </div>
             ))}
             {data.ring_members.includes(selectedNode.id) && (
-              <div className="mt-2 pt-2 border-t">
-                <span className="text-red-600 font-semibold">⚠️ Fraud Ring Member</span>
+              <div className="mt-2 pt-2 border-t border-[#2a2a2a]">
+                <span className="text-red-400 font-semibold">⚠️ Fraud Ring Member</span>
               </div>
             )}
           </div>

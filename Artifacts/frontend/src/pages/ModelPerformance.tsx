@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { BarChart, Bar, LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer, PieChart, Pie, Cell } from 'recharts';
+import '../styles/dark-theme.css';
 
 interface ModelMetrics {
   classification_metrics: {
