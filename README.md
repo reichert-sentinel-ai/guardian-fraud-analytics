@@ -253,7 +253,7 @@ This portfolio project demonstrates skills relevant to:
 | FICO Falcon | 88.7% | 92.1% | 90.4% | 180ms | $0.0035 |
 | Sift | 90.2% | 87.5% | 88.8% | 120ms | $0.0015 |
 
-**Reproduce:** `python benchmarks/run_comparison.py`
+**Reproduce:** `python benchmarks/run_comparison.py```
 
 **Independent Validation:**
 - [Academic paper](./benchmarks/validation-paper.pdf) (peer-reviewed)
@@ -408,26 +408,25 @@ This portfolio project demonstrates skills relevant to:
 
 ## Quick Start
 
-\\\ash
+```bash
 # Install dependencies
 pip install -r requirements.txt
 
 # Run fraud detection pipeline
 python src/main.py --mode fraud-detection
-\\\
-
+```
 ---
 
 ## Project Structure
 
-\\\
+`````
 guardian-fraud-analytics/
 ├── src/              # Source code
 ├── tests/            # Test suite
 ├── docs/             # Documentation
 ├── scripts/          # Utility scripts
 └── data/             # Sample data
-\\\
+`````
 
 ---
 
@@ -454,7 +453,7 @@ This project follows Guardian Fraud Detection System rules for development:
 - **Full Mode (Optional):** 1M+ samples, 1-4 hour runtime, only if explicitly requested
 
 **Sprint Template**
-- Every sprint must follow the structured template in `.cursor/prompts/SPRINT_TEMPLATE.md`
+- Every sprint must follow the structured template in `.cursor/prompts/SPRINT_TEMPLATE.md```
 - Include prerequisites, objective, deliverables, implementation steps, success criteria, and STOP marker
 
 See `.cursorrules` for complete Guardian Fraud Detection System rules.
