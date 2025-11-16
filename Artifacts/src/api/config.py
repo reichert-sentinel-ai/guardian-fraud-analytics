@@ -23,7 +23,12 @@ class Settings(BaseSettings):
     
     # CORS Settings
     cors_enabled: bool = True
-    cors_origins: List[str] = ["*"]  # Configure for production
+    cors_origins: List[str] = [
+        "https://guardian-fraud-detection.vercel.app",  # Update with actual Vercel URL when deployed
+        "https://guardian-fraud-detection-*.vercel.app",  # Preview deployments
+        "http://localhost:5173",  # Local frontend dev server
+        "*"  # Allow all for now - restrict in production if needed
+    ]
     
     # Database Settings (PostgreSQL)
     db_host: str = os.getenv("DB_HOST", "localhost")
