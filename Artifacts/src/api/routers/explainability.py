@@ -5,7 +5,7 @@ SHAP explanation API for fraud detection predictions
 
 from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel
-from typing import Dict, Optional
+from typing import Dict, Optional, Any
 import numpy as np
 
 router = APIRouter(prefix="/api/explainability", tags=["explainability"])
@@ -17,7 +17,7 @@ class TransactionExplanation(BaseModel):
     prediction_label: str
     shap_values: Dict[str, float]  # feature -> SHAP value
     base_value: float
-    feature_values: Dict[str, any]
+    feature_values: Dict[str, Any]  # feature -> value (can be int, float, etc.)
 
 
 class ExplanationRequest(BaseModel):

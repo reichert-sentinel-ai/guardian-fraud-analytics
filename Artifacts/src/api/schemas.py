@@ -29,7 +29,7 @@ class TransactionRequest(BaseModel):
     features: Optional[Dict[str, Any]] = Field(None, description="Additional transaction features")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "amount": 1000.0,
                 "step": 1,
@@ -52,7 +52,7 @@ class BatchTransactionRequest(BaseModel):
     threshold: Optional[float] = Field(0.5, ge=0.0, le=1.0, description="Fraud classification threshold")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "transactions": [
                     {
@@ -73,7 +73,7 @@ class ExplainRequest(BaseModel):
     top_features: Optional[int] = Field(10, ge=1, le=50, description="Number of top features to return")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "transaction": {
                     "amount": 1000.0,
@@ -97,7 +97,7 @@ class PredictionResponse(BaseModel):
     request_id: Optional[str] = Field(None, description="Request ID for tracking")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "is_fraud": 0,
                 "fraud_probability": 0.23,
@@ -119,7 +119,7 @@ class BatchPredictionResponse(BaseModel):
     timestamp: datetime = Field(default_factory=datetime.utcnow, description="Batch prediction timestamp")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "predictions": [
                     {
@@ -144,7 +144,7 @@ class FeatureExplanation(BaseModel):
     feature_value: Optional[Any] = Field(None, description="Actual feature value")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "feature_name": "amount",
                 "shap_value": 0.15,
@@ -163,7 +163,7 @@ class ExplainResponse(BaseModel):
     computation_time_ms: Optional[float] = Field(None, description="SHAP computation time in milliseconds")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "prediction": {
                     "is_fraud": 0,
@@ -194,7 +194,7 @@ class HealthResponse(BaseModel):
     redis_connected: bool = Field(..., description="Whether Redis cache is connected")
     
     class Config:
-        schema_extra = {
+        json_schema_extra = {
             "example": {
                 "status": "healthy",
                 "timestamp": "2024-12-20T10:30:00Z",
